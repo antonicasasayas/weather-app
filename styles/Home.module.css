@@ -1,8 +1,8 @@
 .container{
   display: flex;
+  flex-direction: column;
   
-  flex-wrap: wrap;
-  justify-content: space-between;
+  align-items: center;
   margin: 0 64px;
   
 }
@@ -10,6 +10,8 @@
 .container h1{
   margin: 40px 0px;
   font-size: 30px;
-  font-family: 'roboto-bold';
+  width: 260px;
+  font-family: 'roboto';
   text-align: center;
+  color: rgb(54, 54, 54)
 }

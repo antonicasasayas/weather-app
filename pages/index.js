@@ -16,10 +16,10 @@ export default function Home({data}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div>
-        <h1>What's the weather like in your city?</h1>
+      
+        <h1>What&apos;s the weather like in your city?</h1>
         <SearchBar />
-      </div>
+    
 
       <Image
         src="/images/3324647.jpg"
@@ -31,13 +31,13 @@ export default function Home({data}) {
   );
 }
 
-export async function getServerSideProps() {
+// export async function getServerSideProps() {
 
-  const res = await fetch(
-    "http://api.openweathermap.org/data/2.5/weather?q=London&appid=d3d651c47003ab45403aed1bf195bef0"
-  );
-  const data = await res.json()
-  return {
-    props: {data}, 
-  };
-}
+//   const res = await fetch(
+//     "http://localhost:3000/api/europe"
+//   );
+//   const data = await res.json()
+//   return {
+//     props: {data}, 
+//   };
+// }
