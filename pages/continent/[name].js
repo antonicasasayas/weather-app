@@ -15,7 +15,9 @@ const Continent = ({ data }) => {
 export default Continent;
 
 export async function getStaticProps({params}) {
-  const res = await fetch(`${server}/api/${params.name}`);
+  const res = await fetch(
+    `https://api.openweathermap.org/data/2.5/weather?q=london&appid=${process.env.API_KEY}`
+  );
   const data = await res.json();
   return {
     props: { data },
