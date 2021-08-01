@@ -3,7 +3,7 @@ import Image from 'next/image'
 import SearchBar from '../components/SearchBar'
 import styles from '../styles/Home.module.css'
 
-export default function Home({data}) {
+export default function Home() {
 
 
   
@@ -31,13 +31,4 @@ export default function Home({data}) {
   );
 }
 
-// export async function getServerSideProps() {
 
-//   const res = await fetch(
-//     "http://localhost:3000/api/europe"
-//   );
-//   const data = await res.json()
-//   return {
-//     props: {data}, 
-//   };
-// }
