@@ -14,7 +14,7 @@ const Continent = ({ data }) => {
 export default Continent;
 
 export async function getStaticProps({params}) {
-  const res = await fetch(`https://weather-app.vercel.app/api/${params.name}`);
+  const res = await fetch(`http://weather-app.vercel.app/api/${params.name}`);
   const data = await res.json();
   return {
     props: { data },
