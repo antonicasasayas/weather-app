@@ -40,7 +40,7 @@ const SearchBar = () => {
           type="text"
           name="city"
         />
-        <button type="submit">Search</button>
+        <button data-testid="button" type="submit">Search</button>
       </form>
       
       <div className={isLoading ? styles.ldsRing : null}>

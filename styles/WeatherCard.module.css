@@ -28,5 +28,16 @@
     font-family: 'Roboto-Light'
 }
 
+@media (min-width: 900px){
+  .table{
+      height: 300px;
+      font-size: 20px;
+    margin: 30px 15px;
+    text-align: center;
+   border-collapse: collapse;
+   width: 500px;
+    border: 2px solid rgb(236, 236, 236)
+}
+}
 
 
