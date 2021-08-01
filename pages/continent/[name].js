@@ -2,13 +2,12 @@ import WeatherCard from '../../components/WeatherCard'
 import styles from "../../styles/Continent.module.css"
 import { server } from '../../config';
 const Continent = ({ data }) => {
-  
-
+  console.log(data)
   return (
     <div className={styles.cardsContainer}>
-     
-         <WeatherCard  {...data} />;
-      
+      {data.map((city, index) => {
+        return <WeatherCard key={index} {...city} />;
+      })}
     </div>
   );
 };
@@ -16,9 +15,7 @@ const Continent = ({ data }) => {
 export default Continent;
 
 export async function getStaticProps({params}) {
-  const res = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=london&appid=${process.env.API_KEY}`
-  );
+  const res = await fetch(`${server}/api/${params.name}`);
   const data = await res.json();
   return {
     props: { data },
